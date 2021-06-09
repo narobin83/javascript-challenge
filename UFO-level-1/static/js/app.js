@@ -10,4 +10,9 @@ $resetBtn.addEventListener("click", handleResetButtonClick);
 // from data.js
 var tableData = data;
 
-
+function renderTable() {
+    $tbody.innerHTML = "";
+    for (var i = 0; i < tableData.length; i++) {
+        var address = tableData[i];
+        console.log(address)
+        var fields = Object.keys(address);
