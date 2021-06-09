@@ -27,6 +27,26 @@ function renderTable() {
     }
   }
     
-        
+  function handleSearchButtonClick() {
+    var filterDate = $dateInput.value;
+    
+    if (filterDate != "") {
+      tableData = data.filter(function (address) {
+        var addressDate = address.datetime;
+        return addressDate === filterDate;
+      });
+    }
+    else { tableData };
+  
+    renderTable();
+  }
+  
+  function handleResetButtonClick(){
+    renderTable();
+  }
+  
+
+  renderTable();
+         
 
         
