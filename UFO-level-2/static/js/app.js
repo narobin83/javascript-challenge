@@ -87,3 +87,14 @@ function renderTable() {
         });
       }
       else { tableData };
+
+      if (filterShape != "") {
+        tableData = tableData.filter(function (address) {
+          var addressShape = address.shape;
+          return addressShape === filterShape;
+        });
+      }
+      else { tableData };
+    
+      renderTable();
+    }
