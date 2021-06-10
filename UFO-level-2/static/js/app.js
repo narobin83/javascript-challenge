@@ -71,3 +71,11 @@ function renderTable() {
         });
       }
       else { tableData };
+
+      if (filterCity != "") {
+        tableData = tableData.filter(function (address) {
+          var addressCity = address.city;
+          return addressCity === filterCity;
+        });
+      }
+      else { tableData };
