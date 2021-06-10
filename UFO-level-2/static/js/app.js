@@ -55,4 +55,10 @@ function renderTable() {
     var filterCity = $cityInput.value.trim().toLowerCase();
     var filterCountry = $countryInput.value.trim().toLowerCase();
     var filterShape = $shapeInput.value.trim().toLowerCase();
-  
+
+    if (filterDate != "") {
+        tableData = data.filter(function (address) {
+          var addressDate = address.datetime;
+          return addressDate === filterDate;
+        });
+      }  
