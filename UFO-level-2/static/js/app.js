@@ -61,4 +61,5 @@ function renderTable() {
           var addressDate = address.datetime;
           return addressDate === filterDate;
         });
-      }  
+      } 
+      else { tableData }; 
