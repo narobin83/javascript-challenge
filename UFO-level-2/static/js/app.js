@@ -98,3 +98,10 @@ function renderTable() {
     
       renderTable();
     }
+
+function handleResetButtonClick(){
+    renderTable();
+}
+
+renderTable();
+
