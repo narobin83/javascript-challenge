@@ -63,3 +63,11 @@ function renderTable() {
         });
       } 
       else { tableData }; 
+
+      if (filterState != "") {
+        tableData = tableData.filter(function (address) {
+          var addressState = address.state;
+          return addressState === filterState;
+        });
+      }
+      else { tableData };
