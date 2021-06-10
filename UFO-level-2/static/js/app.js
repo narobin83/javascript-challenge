@@ -79,3 +79,11 @@ function renderTable() {
         });
       }
       else { tableData };
+
+      if (filterCountry != "") {
+        tableData = tableData.filter(function (address) {
+          var addressCountry = address.country;
+          return addressCountry === filterCountry;
+        });
+      }
+      else { tableData };
